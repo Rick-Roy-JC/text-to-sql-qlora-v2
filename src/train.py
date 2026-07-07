@@ -180,8 +180,7 @@ def main() -> None:
         checks = {
             "sec/step sane (<20, i.e. no v1-style 113s slowdown)": sec_per_step < 20,
             "eval ran without OOM": any("eval_loss" in h for h in trainer.state.log_history),
-            "checkpoint written": (output_dir / "checkpoint-10").exists()
-                                   or (output_dir / "checkpoint-20").exists(),
+           "checkpoint written": any(output_dir.glob("checkpoint-*")),
         }
         print("\n=== SMOKE TEST RESULTS ===")
         for name, ok in checks.items():
