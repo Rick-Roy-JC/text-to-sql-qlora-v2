@@ -1,0 +1,7 @@
+# Phase 0-1 (CPU/local). GPU-side deps (unsloth, bitsandbytes, xformers) are
+# installed inside the Kaggle notebook in Phase 2 -- unsloth's install line is
+# environment-specific and pinned there, not here.
+transformers>=4.43,<5
+datasets>=2.20
+tokenizers>=0.19
+sqlparse>=0.5
