@@ -8,3 +8,5 @@ checkpoints/
 outputs/
 *.pt
 .env
+adapters/
+ablation_adapters/
