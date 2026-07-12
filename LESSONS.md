@@ -85,3 +85,6 @@ kill-and-resume before the ablation.
   spent. v1 inverted this and the payoff metric never materialized.
 - **Kaggle as primary compute** (30 GPU-hrs/week, predictable), Lightning AI
   academic credits as backup fuel.
+ 
+ ## More learning around the way
+  interactive session outputs die with the session — Quick Save before stopping, or run anything whose outputs matter as a committed version. Your deepfake-era habit was right all along; we just skipped the ritual once and Kaggle reminded us why it exists.

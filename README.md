@@ -12,12 +12,22 @@ before any GPU time is spent.
 
 ## Results
 
-*(Phase 5 — pending)*
+*(Phase 5 )*
 
 | Model | Exact Match | Execution Accuracy |
 |---|---|---|
-| Phi-3-mini (base) | — | — |
-| + QLoRA (winning r) | — | — |
+| Phi-3-mini (base) | 11.51% | 58.99% |
+| + QLoRA (winning r) | 47.29% | 69.44% |
+
+ Evaluated on Spider's held-out dev set (1,034 examples), greedy decoding, sqlite execution-accuracy harness. Fine-tuning cuts execution errors by ~25% and quadruples exact-match agreement with Spider's SQL style.
+ 
+ | LoRA rank | Final eval loss | 
+|---|---|
+| r=8  | 0.0582 | 
+| r=16 | 0.0569 | 
+| r=32 | 0.0570 | 
+ r=16 selected; doubling to r=32 bought no improvement. Final run: full training set, 3 epochs, eval loss 0.0435.
+
 
 ## Design decisions
 
